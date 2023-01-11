@@ -1,0 +1,189 @@
+Started by user AvaniRana
+Running as SYSTEM
+Building in workspace /Users/avani/.jenkins/workspace/devops-test-project
+The recommended git tool is: NONE
+using credential devops-test-1
+ > git rev-parse --resolve-git-dir /Users/avani/.jenkins/workspace/devops-test-project/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/Avani182/Devops-repo.git # timeout=10
+Fetching upstream changes from https://github.com/Avani182/Devops-repo.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.32.0 (Apple Git-132)'
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --force --progress -- https://github.com/Avani182/Devops-repo.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+Checking out Revision 0b8a5657e4a1ad152231d959f74bb2884850528a (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 0b8a5657e4a1ad152231d959f74bb2884850528a # timeout=10
+Commit message: "Update test.txt"
+ > git rev-list --no-walk 0b8a5657e4a1ad152231d959f74bb2884850528a # timeout=10
+[devops-test-project] $ /bin/sh -xe /var/folders/bg/1s_q8v_12yd174zk10tcq5rc0000gn/T/jenkins15967254271934574548.sh
++ ls -la
+total 100680
+drwxr-xr-x  16 avani  staff       512 Dec 27 20:45 .
+drwxr-xr-x   4 avani  staff       128 Dec 27 17:56 ..
+-rw-r--r--   1 avani  staff      6148 Dec 27 13:35 .DS_Store
+drwxr-xr-x  12 avani  staff       384 Dec 28 00:23 .git
+-rw-r--r--   1 avani  staff      1058 Dec 27 13:35 .gitignore
+-rw-r--r--   1 avani  staff  30101044 Dec 27 15:02 AWSCLIV2.pkg
+-rw-r--r--   1 avani  staff       409 Dec 27 13:35 Dockerfile
+-rw-r--r--   1 avani  staff      1068 Dec 27 13:35 LICENSE
+-rw-r--r--   1 avani  staff        18 Dec 27 13:35 README.md
+drwxr-xr-x   4 avani  staff       128 Dec 27 21:47 awscli-bundle
+-rw-r--r--   1 avani  staff  20723567 Dec 27 21:47 awscli-bundle.zip
+drwxr-xr-x  31 avani  staff       992 Dec 28 00:18 homebrew
+-rw-r--r--   1 avani  staff      1516 Dec 27 13:35 pom.xml
+drwxr-xr-x   4 avani  staff       128 Dec 27 13:35 src
+-rw-r--r--   1 avani  staff       144 Dec 27 15:06 test-trigger-file
+-rw-r--r--   1 avani  staff       113 Dec 27 20:45 test.txt
++ pwd
+/Users/avani/.jenkins/workspace/devops-test-project
++ whoami
+avani
++ echo 0b8a5657e4a1ad152231d959f74bb2884850528a
+0b8a5657e4a1ad152231d959f74bb2884850528a
++ export PATH=/usr/local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
++ PATH=/usr/local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
++ echo /usr/local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+/usr/local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
++ echo Install homebrew.
+Install homebrew.
++ mkdir homebrew
+mkdir: homebrew: File exists
+++ homebrew/bin/brew shellenv
++ eval 'export HOMEBREW_PREFIX="/Users/avani/.jenkins/workspace/devops-test-project/homebrew";
+export HOMEBREW_CELLAR="/Users/avani/.jenkins/workspace/devops-test-project/homebrew/Cellar";
+export HOMEBREW_REPOSITORY="/Users/avani/.jenkins/workspace/devops-test-project/homebrew";
+export PATH="/Users/avani/.jenkins/workspace/devops-test-project/homebrew/bin:/Users/avani/.jenkins/workspace/devops-test-project/homebrew/sbin${PATH+:$PATH}";
+export MANPATH="/Users/avani/.jenkins/workspace/devops-test-project/homebrew/share/man${MANPATH+:$MANPATH}:";
+export INFOPATH="/Users/avani/.jenkins/workspace/devops-test-project/homebrew/share/info:${INFOPATH:-}";'
+++ export HOMEBREW_PREFIX=/Users/avani/.jenkins/workspace/devops-test-project/homebrew
+++ HOMEBREW_PREFIX=/Users/avani/.jenkins/workspace/devops-test-project/homebrew
+++ export HOMEBREW_CELLAR=/Users/avani/.jenkins/workspace/devops-test-project/homebrew/Cellar
+++ HOMEBREW_CELLAR=/Users/avani/.jenkins/workspace/devops-test-project/homebrew/Cellar
+++ export HOMEBREW_REPOSITORY=/Users/avani/.jenkins/workspace/devops-test-project/homebrew
+++ HOMEBREW_REPOSITORY=/Users/avani/.jenkins/workspace/devops-test-project/homebrew
+++ export PATH=/Users/avani/.jenkins/workspace/devops-test-project/homebrew/bin:/Users/avani/.jenkins/workspace/devops-test-project/homebrew/sbin:/usr/local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+++ PATH=/Users/avani/.jenkins/workspace/devops-test-project/homebrew/bin:/Users/avani/.jenkins/workspace/devops-test-project/homebrew/sbin:/usr/local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+++ export MANPATH=/Users/avani/.jenkins/workspace/devops-test-project/homebrew/share/man:
+++ MANPATH=/Users/avani/.jenkins/workspace/devops-test-project/homebrew/share/man:
+++ export INFOPATH=/Users/avani/.jenkins/workspace/devops-test-project/homebrew/share/info:
+++ INFOPATH=/Users/avani/.jenkins/workspace/devops-test-project/homebrew/share/info:
++ brew update --force --quiet
+==> Homebrew has enabled anonymous aggregate formula and cask analytics.
+Read the analytics documentation (and how to opt-out) here:
+  https://docs.brew.sh/Analytics
+No analytics have been recorded yet (nor will be during this `brew` run).
+
+++ brew --prefix
++ chmod -R go-w /Users/avani/.jenkins/workspace/devops-test-project/homebrew/share/zsh
++ echo Install python.
+Install python.
++ brew install python3
+Warning: python@3.10 3.10.9 is already installed and up-to-date.
+To reinstall 3.10.9, run:
+  brew reinstall python@3.10
++ python3 --version
+Python 3.10.9
++ whereis python3
+python3: /usr/bin/python3 /Users/avani/.jenkins/workspace/devops-test-project/homebrew/share/man/man1/python3.1
++ which aws
+/usr/local/bin/aws
++ aws --version
+aws-cli/2.9.10 Python/3.9.11 Darwin/21.4.0 exe/x86_64 prompt/off
++ docker --version
+Docker version 20.10.16, build aa7e414
++ echo Setup AWS credentials.
+Setup AWS credentials.
++ aws configure set aws_access_key_id ****
++ aws configure set aws_secret_key_id ****
++ aws configure set default.region us-east-1
++ aws s3 ls
+2022-12-22 12:07:39 cdk-hnb659fds-assets-487268246017-us-east-1
+2022-12-22 12:23:16 cdksimpleappstack-filestorebucket9577c241-1mkp14pi49f0r
+2022-12-23 17:07:59 my-tf-b18
++ echo Build application image through Docker.
+Build application image through Docker.
++ docker build -t java-maven-test:0b8a5657e4a1ad152231d959f74bb2884850528a .
+#1 [internal] load build definition from Dockerfile
+#1 sha256:84c7f05e8d991768c28e055268deaf7fc92defc8f18a5bed75fb6cb4d568f43a
+#1 transferring dockerfile: 37B 0.0s done
+#1 DONE 0.0s
+
+#2 [internal] load .dockerignore
+#2 sha256:9958ffbd346db5b3fa61367cb266fe786cea3834030a99643d69cab05a0416de
+#2 transferring context: 2B done
+#2 DONE 0.0s
+
+#4 [internal] load metadata for docker.io/library/maven:latest
+#4 sha256:d91fef759315b5c96c932752835baf93ebad77115d37bc5e85ec18d409772dd6
+#4 DONE 0.7s
+
+#3 [internal] load metadata for docker.io/library/openjdk:latest
+#3 sha256:ed320660cddc5cc1ee47cfb8663c432ec9cf37fd690611da1009499b5f86b5af
+#3 DONE 0.9s
+
+#6 [maven_build 1/5] FROM docker.io/library/maven:latest@sha256:5092873778f0495464c1151df8f5c2e01a09ba37d931be719cbc1fc0f4559a07
+#6 sha256:71ed981968a60ceaa80c85ed863f7f7e185aa7260a53f526528a911fccfdce8a
+#6 DONE 0.0s
+
+#5 [stage-1 1/2] FROM docker.io/library/openjdk@sha256:fbddf9af4d18110cfbd80e8cd89fd7503c5bd784d6ffb207b53c95f0dcac77a7
+#5 sha256:132abe2c6b0908bc71f7ae9e9c58214e64edbffcd1e667f6477e644dd9cf4bc4
+#5 DONE 0.0s
+
+#7 [internal] load build context
+#7 sha256:087ea1debdf3558641fa45b0390e504cdfc8571f1b733ac42bcb6fa43646fe0e
+#7 transferring context: 683B 0.0s done
+#7 DONE 0.0s
+
+#9 [maven_build 3/5] COPY src /tmp/src/
+#9 sha256:31c2f1dcb908f44c903ac00b13d883c9d267a1945aca344c2e70695a67f446c6
+#9 CACHED
+
+#10 [maven_build 4/5] WORKDIR /tmp/
+#10 sha256:c25e52d86f4f278164998b506a0a2b7992fb3a7f1fa737ebf60e4aa9ef7d98b6
+#10 CACHED
+
+#8 [maven_build 2/5] COPY pom.xml /tmp/
+#8 sha256:7e4909b1ad4c0fca3b88460a38be43c61ef07bde0ac9f00bbc3280e03206cdfc
+#8 CACHED
+
+#11 [maven_build 5/5] RUN mvn clean install
+#11 sha256:3569bac47d4e17d1412820c444ef9048b8406d425d75aa22b1a6abde503776f5
+#11 CACHED
+
+#12 [stage-1 2/2] COPY --from=maven_build /tmp/target/docker-demo-0.0.1-SNAPSHOT.jar /data/hello-world-0.1.0.jar
+#12 sha256:2a65b0ff595b074c3f8426f5398e5579a3ded92073444cb402cc8af7c35c2a20
+#12 CACHED
+
+#13 exporting to image
+#13 sha256:e8c613e07b0b7ff33893b694f7759a10d42e180f2b4dc349fb57dc6b71dcab00
+#13 exporting layers done
+#13 writing image sha256:872e0ed661f814fcb479ff2a2fc9c370a6c9f3bc810d4d29b7d7eb1f069ac55f
+#13 writing image sha256:872e0ed661f814fcb479ff2a2fc9c370a6c9f3bc810d4d29b7d7eb1f069ac55f done
+#13 naming to docker.io/library/java-maven-test:0b8a5657e4a1ad152231d959f74bb2884850528a done
+#13 DONE 0.0s
+
+Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
++ echo Authenticate Docker and AWS.
+Authenticate Docker and AWS.
++ aws ecr get-login-password --region us-east-1
++ docker login --username AWS --password-stdin 487268246017.dkr.ecr.us-east-1.amazonaws.com
+Login Succeeded
++ echo Tag an image, after build.
+Tag an image, after build.
++ docker tag java-maven-test:testv1 487268246017.dkr.ecr.us-east-1.amazonaws.com/devops-test:0b8a5657e4a1ad152231d959f74bb2884850528a
++ echo Push an image to AWS ECR.
+Push an image to AWS ECR.
++ docker push 487268246017.dkr.ecr.us-east-1.amazonaws.com/devops-test:0b8a5657e4a1ad152231d959f74bb2884850528a
+The push refers to repository [487268246017.dkr.ecr.us-east-1.amazonaws.com/devops-test]
+53915e65d41f: Preparing
+133370ee8d58: Preparing
+ae74011decb8: Preparing
+57f5fe95c403: Preparing
+57f5fe95c403: Layer already exists
+53915e65d41f: Layer already exists
+ae74011decb8: Layer already exists
+133370ee8d58: Layer already exists
+0b8a5657e4a1ad152231d959f74bb2884850528a: digest: sha256:eb9c1f3b4fc6a57a6317b3dfd2acf8c7901390145faf03f7f67a743c4aca37b6 size: 1166
+Finished: SUCCESS
